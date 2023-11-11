@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!------------------ required meta tags ------------------>
+    <meta charset="UTF-8">
+    <meta name="description" content="To Do App">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Felix Baah">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!------------------ cross browser device compatibility ------------------>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!------------------ google fonts ------------------>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!------------------ stylesheets  ------------------>
+    <link rel="stylesheet" href="static/style.css">
+
+    <!------------------ font awesome and google icons  ------------------>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.css" integrity="sha512-KOWhIs2d8WrPgR4lTaFgxI35LLOp5PRki/DxQvb7mlP29YZ5iJ5v8tiLWF7JLk5nDBlgPP1gHzw96cZ77oD7zQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <!------------------ desktop icon image on site ------------------>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    
+    <!------------------ site title ------------------>
+    <title>Frontend Mentor | Todo app</title>
+  </head>
+
+  <body>
+
+    <!------------------ background images ------------------>
+    <picture id="bg-lightmode" style="z-index: -1;">
+      <source media="(min-width: 1439px)" srcset="images/bg-desktop-light.jpg">
+      <source media="(min-width: 376px)" srcset="images/bg-desktop-light.jpg">
+      <source media="(max-width: 376px)" srcset="images/bg-mobile-light.jpg">
+      <img src="images/bg-desktop-light.jpg" 
+      alt="fall back image for light mode" >
+    </picture>
+
+
+    <picture id="bg-darkmode" style="display: none; z-index: -1;">
+      <source media="(min-width: 1439px)" srcset="images/bg-desktop-dark.jpg">
+      <source media="(min-width: 376px)" srcset="images/bg-desktop-dark.jpg">
+      <source media="(max-width: 376px)" srcset="images/bg-mobile-dark.jpg">
+      <img src="images/bg-desktop-dark.jpg" 
+      alt="fall back images for dark mode">
+    </picture>
+
+    <main class="main-container">
+
+      <div class="header-and-toggle-mode">
+        <h1>Todo</h1>
+
+        <div class="icons-toggle-mode">
+
+          <img src="images/icon-moon.svg" 
+          alt="icon for moon toggle switch" 
+          id="toggle-moon"
+          class="toggle-transition">
+
+        </div>
+      </div>
+
+      <div class="continer-for-adding">
+        <button id="circle-container"></button>
+        <label for="add-todo">
+          <input type="text" id="add-todo" placeholder="Create a new todo...">
+        </label>
+      </div>
+
+      <div id="task-container">
+        <div class="bottom-container">
+          <p id="task-count">task left</p>
+          <p id="option-to-clear">clear completed</p>
+        </div>
+      </div>
+
+      
+      <div id="task-completed-container" style="display: none;"></div>
+      <div id="task-currently-active" style="display: none;"></div>
+      
+
+      <div id="container-options">
+
+        <div class="firstline-container" >
+          <p id="task-count-for-desktop">task left</p>
+        </div>
+        <div class="middle-container">
+          <p class="same-style" id="all-task">all</p>
+          <p class="same-style" id="active">active</p>
+          <p class="same-style" id='completed'>completed</p>
+        </div>
+        <div class="last-container" >
+          <p id="option-to-clear-for-desktop">clear completed</p>
+        </div>
+        
+      </div>
+
+      <p class="drag-and-drop-text">
+        Drag and drop to reorder list
+      </p>
+
+    </main>
+
+
+    <script src="js files/app.js"></script>
+    
+  </body>
+</html>

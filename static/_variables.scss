@@ -1,0 +1,31 @@
+// required imports of fonts and icons
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;400;500;600;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.css');
+
+
+//css variables
+$fs :'Josefin Sans', sans-serif;
+
+$fw-reg :400;
+$fw-med :500;
+$fw-bold :700;
+
+//Primary colors
+$clr-bgh-blue :hsl(220, 98%, 61%);
+$clr-bg-lg :linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+
+//light themes
+$clr-lght-gray:hsl(0, 0%, 98%);
+$clr-very-lght-grayish-blue :hsl(236, 33%, 92%);
+$clr-lght-grayish-blue :hsl(233, 11%, 84%);
+$clr-dark-grayish-blue :hsl(236, 9%, 61%);
+$clr-very-dark-grayish-blue:hsl(235, 19%, 35%);
+
+//dark themes
+$clr-very-dark-blue:hsl(235, 21%, 11%);
+$clr-very-dark-desaturated-blue:hsl(235, 24%, 19%);
+$clr-lght-gray-blue:hsl(234, 39%, 85%);
+$clr-lght-gray-blue-hover:hsl(236, 33%, 92%);
+$clr-dark-gray-blue:hsl(234, 11%, 52%);
+$clr-very-dark-gray-blue:hsl(233, 14%, 35%);
+$clr-very-dark-gray-blue-2:hsl(237, 14%, 26%);

@@ -1,0 +1,468 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;400;500;600;700&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.css");
+/* custom css reset */
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;400;500;600;700&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.css");
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+img,
+picture,
+video,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+* {
+  font-size: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+body {
+  position: relative;
+}
+
+.main-container {
+  position: absolute;
+  top: 3rem;
+  width: 100%;
+  height: auto;
+}
+.main-container > .header-and-toggle-mode {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 86%;
+  max-height: auto;
+  justify-content: space-between;
+}
+.main-container > .header-and-toggle-mode > h1 {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700;
+  color: hsl(0, 0%, 98%);
+  font-size: clamp(1.8rem, 1.9vw, 2rem);
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  height: 100%;
+  cursor: pointer;
+}
+.main-container > .header-and-toggle-mode > .icons-toggle-mode > #toggle-moon {
+  font-size: clamp(1rem, 1vw, 1.2rem);
+}
+.main-container > .header-and-toggle-mode > .icons-toggle-mode > #toggle-moon:hover, .main-container > .header-and-toggle-mode > .icons-toggle-mode > #toggle-moon :active {
+  cursor: pointer;
+}
+
+.toggle-transition.active {
+  transition: all 0.5s ease;
+}
+
+.toggle-transition-for-all {
+  transition: all 0.5s ease;
+}
+
+.continer-for-adding {
+  width: 86%;
+  height: 3rem;
+  margin: clamp(1.45rem, 1.65vw, 1.7rem) auto 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 clamp(0.2rem, 0.3vw, 0.4rem) 0rem clamp(1.1rem, 1.15vw, 1.2rem);
+  -moz-column-gap: clamp(0.65rem, 0.7vw, 0.8rem);
+       column-gap: clamp(0.65rem, 0.7vw, 0.8rem);
+  background-color: hsl(0, 0%, 98%);
+  border-radius: 0.3rem;
+}
+.continer-for-adding > #circle-container {
+  width: 1.3rem;
+  height: 1.25rem;
+  border-radius: 50rem;
+  border: 0.05rem solid hsl(234, 11%, 52%);
+  background-color: transparent;
+  cursor: pointer;
+}
+.continer-for-adding > label {
+  width: 100%;
+  height: 90%;
+  border-radius: 0.1rem;
+  padding: 0;
+}
+.continer-for-adding > label > input {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.2rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: clamp(0.75rem, 0.8vw, 0.85rem);
+  font-weight: 400;
+  color: hsl(233, 14%, 35%);
+  letter-spacing: 0.05rem;
+  border: none;
+  background-color: hsl(0, 0%, 98%);
+  padding: 0rem 0rem 0rem 0.1rem;
+}
+
+#task-container {
+  width: 86%;
+  height: auto;
+  margin: clamp(0.9rem, 0.95vw, 1rem) auto 0rem auto;
+  border-radius: 0.2rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column-reverse;
+  position: relative;
+}
+#task-container > div.task {
+  width: 100%;
+  height: clamp(3rem, 3vw, 3.1rem);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 clamp(0.8rem, 0.9vw, 0.95rem) 0rem clamp(1.1rem, 1.15vw, 1.2rem);
+  -moz-column-gap: clamp(0.65rem, 0.7vw, 0.8rem);
+       column-gap: clamp(0.65rem, 0.7vw, 0.8rem);
+  background-color: transparent !important;
+  border-bottom: 0.01rem solid hsl(233, 11%, 84%);
+  border-width: 100%;
+  border-radius: 0.2rem;
+}
+#task-container > div.task > .checkTask {
+  width: 1.3rem;
+  height: 1.3rem;
+  border-radius: 50rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.05rem solid hsl(236, 9%, 61%);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: transparent;
+}
+#task-container > div.task > .checkTask:hover {
+  cursor: pointer;
+}
+#task-container > div.task > li {
+  list-style: none;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: clamp(0.85rem, 0.9vw, 0.95rem);
+  color: hsl(233, 14%, 35%);
+  font-weight: 500;
+  letter-spacing: 0.05rem;
+  cursor: pointer;
+}
+#task-container > div.task > .deleteTask {
+  border: none;
+  background-color: transparent;
+  font-weight: 300;
+  transform: scale(0.7);
+  position: absolute;
+  right: 5%;
+  cursor: pointer;
+}
+#task-container > .bottom-container {
+  width: 100%;
+  height: clamp(3rem, 3vw, 3.1rem);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 clamp(0.8rem, 0.9vw, 0.95rem) 0rem clamp(1.1rem, 1.15vw, 1.2rem);
+  -moz-column-gap: clamp(0.65rem, 0.7vw, 0.8rem);
+       column-gap: clamp(0.65rem, 0.7vw, 0.8rem);
+  background-color: transparent !important;
+  box-shadow: 0px 8px 45px rgba(64, 72, 87, 0.3);
+  border-width: 100%;
+  border-radius: 0.2rem;
+  position: relative;
+}
+#task-container > .bottom-container > p {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: clamp(0.65rem, 0.7vw, 0.7rem);
+  color: hsl(233, 14%, 35%);
+  font-weight: 500;
+  letter-spacing: 0.05rem;
+}
+#task-container > .bottom-container > p#option-to-clear {
+  text-transform: capitalize;
+  cursor: pointer;
+}
+#task-container > .bottom-container > p#option-to-clear:hover, #task-container > .bottom-container > p#option-to-clear :active {
+  color: hsl(235, 21%, 11%);
+}
+
+#task-completed-container,
+#task-currently-active {
+  width: 86%;
+  height: auto;
+  margin: clamp(0.9rem, 0.95vw, 1rem) auto 0rem auto;
+  background-color: hsl(0, 0%, 98%);
+  border-radius: 0.2rem;
+  box-shadow: 0px 6px 25px rgba(64, 72, 87, 0.25);
+  background-color: hsl(0, 0%, 98%);
+}
+#task-completed-container > div.task,
+#task-currently-active > div.task {
+  width: 100%;
+  height: clamp(3rem, 3vw, 3.1rem);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 clamp(0.8rem, 0.9vw, 0.95rem) 0rem clamp(1.1rem, 1.15vw, 1.2rem);
+  -moz-column-gap: clamp(0.65rem, 0.7vw, 0.8rem);
+       column-gap: clamp(0.65rem, 0.7vw, 0.8rem);
+  background-color: transparent !important;
+  border-bottom: 0.009rem solid hsl(236, 9%, 61%);
+  border-width: 100%;
+  border-radius: 0.2rem;
+  position: relative;
+  z-index: 1000;
+}
+#task-completed-container > div.task > .checkTask,
+#task-currently-active > div.task > .checkTask {
+  width: 1.3rem;
+  height: 1.3rem;
+  border-radius: 50rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.05rem solid hsl(233, 14%, 35%);
+  background-color: transparent;
+  cursor: pointer;
+  background-clip: padding-box;
+  box-sizing: border-box;
+  position: relative;
+}
+#task-completed-container > div.task > li,
+#task-currently-active > div.task > li {
+  list-style: none;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: clamp(0.85rem, 0.9vw, 0.95rem);
+  color: hsl(233, 14%, 35%);
+  font-weight: 500;
+  letter-spacing: 0.05rem;
+  cursor: pointer;
+}
+#task-completed-container > div.task > .deleteTask,
+#task-currently-active > div.task > .deleteTask {
+  border: none;
+  background-color: transparent;
+  font-weight: 300;
+  transform: scale(0.7);
+  position: absolute;
+  right: 5%;
+  color: hsl(233, 14%, 35%);
+  cursor: pointer;
+}
+
+.btn-transition {
+  transition: all 0.5s ease-in-out;
+}
+
+#container-options {
+  width: 86%;
+  height: 3rem;
+  margin: clamp(0.9rem, 0.95vw, 1rem) auto clamp(2rem, 2.5vw, 3rem) auto;
+  border-radius: 0.2rem;
+  background-color: white;
+  box-shadow: 0px 8px 50px rgba(64, 72, 87, 0.3);
+}
+#container-options > .middle-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  -moz-column-gap: 0.95rem;
+       column-gap: 0.95rem;
+}
+#container-options > .middle-container > .same-style {
+  font-family: "Josefin Sans", sans-serif;
+  color: hsl(234, 11%, 52%);
+  font-size: clamp(0.875rem, 0.9vw, 0.95rem);
+  text-transform: capitalize;
+  font-weight: 700;
+  cursor: pointer;
+}
+#container-options > .middle-container > .same-style:hover, #container-options > .middle-container > .same-style :active {
+  color: hsl(235, 21%, 11%);
+}
+
+.dark-mode {
+  background-color: hsl(235, 24%, 19%);
+}
+
+.light-mode {
+  background-color: hsl(0, 0%, 98%);
+}
+
+.drag-and-drop-text {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: clamp(0.875rem, 0.9vw, 1rem);
+  text-align: center;
+  font-weight: 400;
+  color: hsl(236, 9%, 61%);
+  margin-bottom: 8%;
+}
+
+/*TODO:
+- make the media queries for the containers and the whole setup✅
+- also make the button 'clear completed' and the 'amount of task left'✅
+to be on the same container as the task section buttons 'all , active , completed'✅
+*/
+@media (max-width: 1439px) {
+  .firstline-container {
+    display: none;
+  }
+  .last-container {
+    display: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 768px) {
+  body {
+    font-size: clamp(1.1rem, 1.15vw, 1.2rem);
+  }
+}
+@media (min-width: 1439px) {
+  .main-container {
+    position: absolute;
+    top: clamp(4.375rem, 4.5vw, 5rem);
+  }
+  .main-container > .header-and-toggle-mode {
+    max-width: clamp(33.8125rem, 33.85vw, 33.9rem);
+  }
+  .main-container > .header-and-toggle-mode > h1 {
+    font-size: clamp(2.5rem, 2.5vw, 2.7rem);
+    letter-spacing: 15px;
+    line-height: 3.3rem;
+  }
+  .main-container > .header-and-toggle-mode > .icons-toggle-mode > #toggle-moon {
+    font-size: clamp(2.5rem, 2.5vw, 2.7rem);
+  }
+  .continer-for-adding {
+    width: clamp(33.8125rem, 33.85vw, 33.9rem);
+    height: 4rem;
+    padding: 0 clamp(0.2rem, 0.3vw, 0.4rem) 0rem clamp(1.1rem, 1.15vw, 1.2rem);
+    -moz-column-gap: clamp(1rem, 1.1vw, 1.2rem);
+         column-gap: clamp(1rem, 1.1vw, 1.2rem);
+    margin: clamp(1.8rem, 2vw, 2.2rem) auto 0 auto;
+  }
+  .continer-for-adding > #circle-container {
+    width: 1.5rem;
+    height: 1.4rem;
+  }
+  .continer-for-adding > label > input {
+    font-size: clamp(1.125rem, 1.15vw, 1.2rem);
+    padding: 0rem 0rem 0rem 0.2rem;
+  }
+  #task-container {
+    width: clamp(33.8125rem, 33.85vw, 33.9rem);
+    margin: clamp(1.2rem, 1.3vw, 1.4rem) auto 0rem auto;
+  }
+  #task-container > .bottom-container {
+    display: none;
+  }
+  #container-options {
+    width: clamp(33.8125rem, 33.85vw, 33.9rem);
+    height: 4rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0rem clamp(1.1rem, 1.15vw, 1.2rem) 0rem clamp(1.1rem, 1.15vw, 1.2rem);
+    margin: 0 auto 4% auto;
+    border-radius: 0.1rem 0.1rem 0.2rem 0.2rem;
+  }
+  #container-options > .firstline-container {
+    display: block;
+  }
+  #container-options > .firstline-container > p#task-count-for-desktop {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: clamp(0.875rem, 0.9vw, 0.95rem);
+    color: hsl(236, 9%, 61%);
+    font-weight: 500;
+    letter-spacing: 0.05rem;
+  }
+  #container-options > .middle-container {
+    width: auto;
+    height: auto;
+  }
+  #container-options > .last-container {
+    display: block;
+  }
+  #container-options > .last-container > p#option-to-clear-for-desktop {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: clamp(0.875rem, 0.9vw, 0.95rem);
+    color: hsl(236, 9%, 61%);
+    font-weight: 500;
+    letter-spacing: 0.05rem;
+    text-transform: capitalize;
+    cursor: pointer;
+  }
+  #container-options > .last-container > p#option-to-clear-for-desktop:hover, #container-options > .last-container > p#option-to-clear-for-desktop :active {
+    color: hsl(235, 21%, 11%);
+  }
+  #task-container {
+    width: clamp(33.8125rem, 33.85vw, 33.9rem);
+    margin: clamp(1.2rem, 1.25vw, 1.3rem) auto 0rem auto;
+  }
+  #task-container > div.task {
+    width: 100%;
+    height: 4rem;
+    border-radius: 0rem 0rem 0.2rem 0.2rem;
+  }
+  #task-container > div.task > .checkTask {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  #task-container > div.task > li {
+    font-size: clamp(1.125rem, 1.15vw, 1.15rem);
+  }
+  #task-container > div.task > .deleteTask {
+    transform: scale(0.85);
+    display: none;
+  }
+  #task-completed-container,
+  #task-currently-active {
+    width: clamp(33.8125rem, 33.85vw, 33.9rem);
+    margin: clamp(1.2rem, 1.25vw, 1.3rem) auto 0rem auto;
+  }
+  #task-completed-container > div.task,
+  #task-currently-active > div.task {
+    width: 100%;
+    height: 4rem;
+    border-radius: 0rem 0rem 0.2rem 0.2rem;
+  }
+  #task-completed-container > div.task > li,
+  #task-currently-active > div.task > li {
+    font-size: clamp(1.125rem, 1.15vw, 1.15rem);
+  }
+  #task-completed-container > div.task > .deleteTask,
+  #task-currently-active > div.task > .deleteTask {
+    transform: scale(0.85);
+  }
+}/*# sourceMappingURL=style.css.map */
